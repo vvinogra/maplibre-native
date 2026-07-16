@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MultiBackend Sample</string>
+    <string name="current_engine">Renderer: %1$s</string>
+    <string name="switch_backend_button">Switch to %1$s</string>
+</resources>
