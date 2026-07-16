@@ -21,7 +21,7 @@ object EnginePreference {
   }
 
   fun save(context: Context, type: RenderingEngine.Type) {
-    prefs(context).edit().putString(KEY_ENGINE_TYPE, type.name).apply()
+    prefs(context).edit().putString(KEY_ENGINE_TYPE, type.name).commit()
   }
 
   private fun prefs(context: Context) =

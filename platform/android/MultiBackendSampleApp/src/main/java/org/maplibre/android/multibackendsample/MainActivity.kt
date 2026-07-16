@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
   private lateinit var mapView: MapView
 
   override fun onCreate(savedInstanceState: Bundle?) {
-
-      RenderingEngine.setCurrentType(RenderingEngine.Type.VULKAN)
-
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
@@ -32,6 +29,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
       getString(R.string.current_engine, currentType.name)
 
     val switchButton = findViewById<MaterialButton>(R.id.switchBackendButton)
+
+    val targetType = otherType(currentType)
 
     switchButton.text = getString(R.string.switch_backend_button, targetType.name)
     switchButton.setOnClickListener {
